@@ -11,7 +11,7 @@ const startResearch = () => {
 
 const listenToSockEvents = () => {
     const converter = new showdown.Converter();
-    const socket = new WebSocket("ws://https://gpt-researcher-c9a20e1f103a.herokuapp.com/ws");
+    const socket = new WebSocket("ws://https://gpt-researcher-c9a20e1f103a.herokuapp.com/");
     socket.onmessage = (event) => {
         const data = JSON.parse(event.data);
         if (data.type === 'logs') {
